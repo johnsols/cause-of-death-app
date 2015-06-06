@@ -82,12 +82,19 @@
 				<label for="InjuryTimeCode">Code</label>
 				<input type="text" class="form-control time code" id="InjuryTimeCode" placeholder="PM" maxlength="2">
 			</div>
-
-
-			<div class="checkbox">
-				<label>
-					<input type="checkbox"> Check me out
-				</label>
+			<!-- place information -->
+			<div class="form-group">
+				<label for="PlaceOfInjury">PLACE OF INJURY (e.g., Decendent's home; construction site; restaurant; wooded area)</label>
+				<input type="text" class="form-control place" id="PlaceOfInjury" placeholder="Decendent's home">
+			</div>
+			<div class="form-group">
+				<label for="WorkInjury"></label>
+				<select id="WorkInjury">
+					<option value="Y">Yes</option>
+					<option value="N">No</option>
+					<option value="U">Unknown</option>
+					<option value="X">Not Reported</option>
+				</select>
 			</div>
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
