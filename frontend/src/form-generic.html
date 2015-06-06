@@ -87,15 +87,52 @@
 				<label for="PlaceOfInjury">PLACE OF INJURY (e.g., Decendent's home; construction site; restaurant; wooded area)</label>
 				<input type="text" class="form-control place" id="PlaceOfInjury" placeholder="Decendent's home">
 			</div>
+			<!-- work injury information -->
 			<div class="form-group">
-				<label for="WorkInjury"></label>
+				<label for="WorkInjury">INJURY AT WORK?</label>
 				<select id="WorkInjury">
+					<option value="">Select from below</option>
 					<option value="Y">Yes</option>
 					<option value="N">No</option>
 					<option value="U">Unknown</option>
 					<option value="X">Not Reported</option>
 				</select>
 			</div>
+			<!-- location information -->
+			<div class="form-group">
+				<div>LOCATION OF INJURY</div>
+				<label for="LocStreetNum">Street Number</label>
+				<input type="text" class="form-control" id="StreetNum" placeholder="123">
+				<label for="LocStreetName">Street Name</label>
+				<input type="text" class="form-control" id="StreetName" placeholder="Cherry Street">
+				<label for="LocAptNum">Apt/Unit #</label>
+				<input type="text" class="form-control" id="AptNum" placeholder="Apt 2">
+				<label for="LocCity">City</label>
+				<input type="text" class="form-control" id="LocCity" placeholder="Atlanta">
+				<label for="LocState">State</label>
+				<input type="text" class="form-control" id="LocState" placeholder="GA" maxlength="2">
+				<label for="LocZip">Zip</label>
+				<input type="number" class="form-control" id="LocZip" placeholder="30306">
+			</div>
+			<!-- injury description information -->
+			<div class="form-group">
+				<label for="InjuryDescription">DESCRIBE HOW INJURY OCCURRED</label>
+				<input type="text" class="form-control" id="InjuryDescription" placeholder="Type description here" maxlength="250">
+			</div>
+			<!-- work injury information -->
+			<div class="form-group">
+				<label for="Transport">IF TRANSPORTATION INJURY, SPECIFY</label>
+				<select id="Transport">
+					<option value="">Select from below</option>
+					<option value="Driver/Operator">Driver/Operator</option>
+					<option value="Passenger">Passenger</option>
+					<option value="Pedestrian">Pedestrian</option>
+					<option value="Other (Specify)">Other (Specify)</option>
+				</select><br><br>
+				<label for="TransportOther">If other, specify: </label>
+				<input type="text" class="form-control" id="TransportOther" placeholder="Type other details" maxlength="30">
+			</div>
+
 			<button type="submit" class="btn btn-default">Submit</button>
 		</form>
 
