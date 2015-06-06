@@ -57,6 +57,11 @@
 				<label for="Line2">Significant conditions contributing to death but not resulting in the underlining cause given in PART I</label>
 				<input type="text" class="form-control" id="Line2" placeholder="" maxlength="240">
 			</div>
+			<!-- datetime -->
+			<!-- <div class="form-group">
+				<label for="TimeOfDeath">DATE/TIME OF INJURY</label>
+				<input type="datetime-local" id="TimeOfDeath">
+			</div> -->
 			<!-- date information -->
 			<div class="form-group">
 				<div>DATE OF INJURY</div>
@@ -66,6 +71,16 @@
 				<input type="text" class="form-control date day" id="DayOfDeath" placeholder="20" maxlength="2">
 				<label for="YearOfDeath">Year</label>
 				<input type="number" class="form-control date yr" id="YearOfDeath" placeholder="2015" maxlength="4">
+			</div>
+			<!-- time information -->
+			<div class="form-group">
+				<div>TIME OF INJURY</div>
+				<label for="HourOfInjury">Hour</label>
+				<input type="text" class="form-control time hr" id="HourOfInjury" placeholder="5">
+				<label for="MinOfInjury">Minute</label>
+				<input type="text" class="form-control time min" id="MinOfInjury" placeholder="00" maxlength="2">
+				<label for="InjuryTimeCode">Code</label>
+				<input type="text" class="form-control time code" id="InjuryTimeCode" placeholder="PM" maxlength="2">
 			</div>
 
 
