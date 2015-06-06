@@ -34,3 +34,21 @@ header{
     padding: 1em;
     text-align: center;
 }
+
+/* form-generic styles */
+
+.form-generic{
+    font-size:.8em;
+    padding:1em;
+}
+
+.form-generic h4{
+    margin:.5em 0;
+    font-weight:bold;
+}
+
+.duration{
+    width:172px;
+}
+
+/* form-wizard styles */
