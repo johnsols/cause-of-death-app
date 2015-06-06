@@ -51,4 +51,16 @@ header{
     width:172px;
 }
 
+.mo{
+    width:88px;
+}
+
+.day{
+    width:44px;
+}
+
+.yr{
+    width:80px;
+}
+
 /* form-wizard styles */
