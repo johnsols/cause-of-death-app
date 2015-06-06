@@ -22,35 +22,35 @@
 
 	<section class="form-generic">
 
-		<form>
+		<form name="codForm" ng-submit="submitForm(codForm.$valid)">
 			<h4>PART I.</h4>
 			<div class="form-group form-inline">
 				<div>IMMEDIATE CAUSE (Final disease or condition resulting in death)</div>
 				<label for="Line1a"><span>a. </span>Due to (or as a consequence of)</label>
-				<input type="text" class="form-control" id="Line1a" placeholder="" maxlength="120">
+				<input type="text" class="form-control" ng-model="line1a" id="Line1a" ng-required="true" ng-minlength="120" placeholder="" maxlength="120">
 				<label for="Duration1a"><span>a. </span>Approximate interval: Onset to death</label>
-				<input type="text" class="form-control duration" id="Duration1a" placeholder="" maxlength="20">
+				<input type="text" class="form-control duration" ng-model="duration1a" ng-required="true" id="Duration1a" ng-minlength="120" placeholder="" maxlength="20">
 			</div>
 			<div class="form-group form-inline">
 				<div>Additional condition that led to the immediate cause</div>
 				<label for="Line1b"><span>b. </span>Due to (or as a consequence of)</label>
-				<input type="text" class="form-control" id="Line1b" placeholder="" maxlength="120">
+				<input type="text" class="form-control" ng-model="line1b" id="Line1b" placeholder="" ng-minlength="120" maxlength="120">
 				<label for="Duration1b"><span>b. </span>Approximate interval: Onset to death</label>
-				<input type="text" class="form-control duration" id="Duration1b" placeholder="" maxlength="20">
+				<input type="text" class="form-control duration" ng-model="duration1b" id="Duration1b" ng-minlength="120" placeholder="" maxlength="20">
 			</div>
 			<div class="form-group form-inline">
 				<div>Additional condition that led to the immediate cause</div>
 				<label for="Line1c"><span>c. </span>Due to (or as a consequence of)</label>
-				<input type="text" class="form-control" id="Line1c" placeholder="" maxlength="120">
+				<input type="text" class="form-control" id="Line1c" ng-model="line1c" placeholder="" ng-minlength="120" maxlength="120">
 				<label for="Duration1c"><span>c. </span>Approximate interval: Onset to death</label>
-				<input type="text" class="form-control duration" id="Duration1c" placeholder="" maxlength="20">
+				<input type="text" class="form-control duration" id="Duration1c" ng-model="duration1c" ng-minlength="120" placeholder="" maxlength="20">
 			</div>
 			<div class="form-group form-inline">
 				<div>Additional condition that led to the immediate cause</div>
 				<label for="Line1d"><span>d. </span>Due to (or as a consequence of)</label>
-				<input type="text" class="form-control" id="Line1d" placeholder="" maxlength="120">
+				<input type="text" class="form-control" id="Line1d" ng-model="line1d" placeholder="" ng-minlength="120" maxlength="120">
 				<label for="Duration1d"><span>d. </span>Approximate interval: Onset to death</label>
-				<input type="text" class="form-control duration" id="Duration1d" placeholder="" maxlength="20">
+				<input type="text" class="form-control duration" id="Duration1d" ng-model="duration1d" ng-minlength="120" placeholder="" maxlength="20">
 			</div>
 			<h4>PART II.</h4>
 			<div class="form-group">
@@ -100,6 +100,20 @@
 		</form>
 
 	</section>
+
+	<script>
+		var validation = angular.module('CODFormGeneric', []);
+
+		validation.controller('mainController', function($scope) {
+	  	$scope.submitForm = function(isValid) {
+	    // check to make sure the form is completely valid
+	    if (isValid) {
+	      alert('Data is valid');
+	    }
+	  };
+	});
+
+	</script>
 
 </body>
 
